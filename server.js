@@ -48,6 +48,13 @@ app.get('/about', (req, res) => {
   })
 })
 
+app.get('/projects', (req, res) => {
+  res.render('projects', {
+    pageTitle: `Portfolio Page`,
+    pageMessage: `Web Portfolio forthcoming shortly...`
+  })
+})
+
 app.use(express.static(__dirname + '/public'))
 
 app.listen(PORT, () => {
